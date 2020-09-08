@@ -1,0 +1,6 @@
+  set(tests pipe_test)
+  foreach(test IN LISTS tests)
+    add_executable(${test} ${test}.cpp catch.hpp)
+    target_link_libraries(${test} PRIVATE pipelines::pipelines)
+    add_test(NAME ${test} COMMAND ${test})
+  endforeach()

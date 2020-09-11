@@ -15,6 +15,7 @@ add_custom_target(doxygen ALL DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/xml/index.xml
 
 list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 find_package(Sphinx REQUIRED)
+find_package(Breathe REQUIRED)
 add_custom_command(
   OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/documentation/sphinx/index.html"
   DEPENDS ${restructured_text_files}

@@ -1,5 +1,8 @@
 cmake_minimum_required(VERSION 3.16)
 project(pipelines LANGUAGES CXX)
+
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
+include(PipelinesCompilerSupport)
 add_subdirectory(pipelines)
 
 include(CTest)
@@ -23,3 +26,5 @@ add_subdirectory(documentation)
 # TODO - Consider adding a target to build PDF documentation with Sphinx.
 # TODO - Update the Doxygen, Sphinx, and Breathe configurations. This may allow cleaning up the .gitignore file.
 # TODO - Clean up documentation/CMakeLists.txt.
+# TODO - Add INTERFACE properties to the library.
+# TODO - Add support for Visual Studio.

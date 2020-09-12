@@ -45,12 +45,17 @@ cpack -G DEB
 sudo apt install ./Catch2-2.13.1-Linux.deb
 ```
 
+#### Cppcheck
+
+[Cppcheck](https://github.com/danmar/cppcheck) is required as a part of the
+build process. Install it using the appropriate mechanism for your platform.
+
 #### Doxgyen
 
 [Doxygen](https://www.doxygen.nl/index.html) is used to build the
 documentation. At this time, Doxygen is required; there is no way to disable
-building the documentation. Install it using appropriate mechanism for your
-platform.
+building the documentation. Install it using the appropriate mechanism for
+your platform.
 
 #### Sphinx
 

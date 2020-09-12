@@ -4,11 +4,12 @@ Checks: >
   clang-diagnostic-*,
   clang-analyzer-*,
   *,
-  -fuchsia-default-arguments,
-  -fuchsia-overloaded-operator,
-  -readability-magic-numbers
+  -fuchsia-*,
+  -google-readability-todo,
+  -readability-magic-numbers,
+  -llvm-header-guard
 WarningsAsErrors: '*'
-HeaderFilterRegex: ''
+HeaderFilterRegex: 'pipelines/'
 AnalyzeTemporaryDtors: false
 FormatStyle: file
 ...

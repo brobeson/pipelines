@@ -42,7 +42,7 @@ namespace pipelines
      * \return The first data element available in the pipe.
      * \throws pipelines::empty_pipe if the pipe is empty.
      */
-    [[nodiscard]] value_type read()
+    [[nodiscard]] auto read()
     {
       if (m_queue.empty())
       {
@@ -58,13 +58,13 @@ namespace pipelines
      * \retval true Indicates there are no elements in the pipe.
      * \retval false Indicates there is at least one element in the pipe.
      */
-    [[nodiscard]] bool empty() const noexcept { return m_queue.empty(); }
+    [[nodiscard]] auto empty() const noexcept { return m_queue.empty(); }
 
     /**
      * \brief Get the number of elements in the pipe.
      * \return The number of elements in the pipe.
      */
-    [[nodiscard]] size_type size() const noexcept { return m_queue.size(); }
+    [[nodiscard]] auto size() const noexcept { return m_queue.size(); }
 
   private:
     // TODO This needs to be made thread safe.

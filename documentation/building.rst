@@ -42,6 +42,13 @@ the Catch2 repository and build directory.
     cpack -G DEB
     sudo apt install ./Catch2-2.13.1-Linux.deb
 
+Clang-Tidy
+..........
+
+`Clang-Tidy <https://clang.llvm.org/extra/clang-tidy/>`_ is required as part
+of the build process. Install it using the appropriate mechanism for your
+platform.
+
 Cppcheck
 ........
 

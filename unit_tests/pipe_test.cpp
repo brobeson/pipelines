@@ -8,7 +8,10 @@ SCENARIO("A pipe can be constructed.")
   {
     pipelines::pipe<int> pipe;
     THEN("it is empty") { CHECK(pipe.empty()); }
-    AND_THEN("it's size is 0") { CHECK(pipe.size() == 0); }
+    AND_THEN("it's size is 0")
+    {
+      CHECK(pipe.size() == 0);  // NOLINT(readability-container-size-empty)
+    }
   }
 }
 
@@ -26,13 +29,13 @@ SCENARIO("Data can be written to a pipe.")
     }
     WHEN("a datum is written")
     {
-      pipe.write(10);
+      pipe.write(10);  // NOLINT(cppcoreguidelines-avoid-magic-numbers)
       THEN("the pipe's size is one") { CHECK(pipe.size() == 1); }
     }
     WHEN("Two data are written")
     {
-      pipe.write(10);
-      pipe.write(20);
+      pipe.write(10);  // NOLINT(cppcoreguidelines-avoid-magic-numbers)
+      pipe.write(20);  // NOLINT(cppcoreguidelines-avoid-magic-numbers)
       THEN("The pipe's size is two") { CHECK(pipe.size() == 2); }
     }
   }
@@ -43,8 +46,8 @@ SCENARIO("Data can be read from a pipe.")
   GIVEN("A pipe with two data")
   {
     pipelines::pipe<int> pipe;
-    pipe.write(10);
-    pipe.write(20);
+    pipe.write(10);  // NOLINT(cppcoreguidelines-avoid-magic-numbers)
+    pipe.write(20);  // NOLINT(cppcoreguidelines-avoid-magic-numbers)
     WHEN("One datum is read")
     {
       const auto d {pipe.read()};
@@ -61,7 +64,10 @@ SCENARIO("Data can be read from a pipe.")
         CHECK(e == 20);
       }
       AND_THEN("The pipe is empty") { CHECK(pipe.empty()); }
-      AND_THEN("The pipe's size is zero") { CHECK(pipe.size() == 0); }
+      AND_THEN("The pipe's size is zero")
+      {
+        CHECK(pipe.size() == 0);  // NOLINT(readability-container-size-empty)
+      }
     }
   }
 }

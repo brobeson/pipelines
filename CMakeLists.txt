@@ -23,7 +23,6 @@ add_subdirectory(documentation)
 # TODO - Add a PyPI requirements file to install Sphinx and breathe.
 
 # Quality Tasks
-# TODO - Add clang-tidy to the build process.
 # TODO - Add include-what-you-use to the build process.
 # TODO - Add Travis CI.
 # TODO - Add address sanitizer to the unit tests.

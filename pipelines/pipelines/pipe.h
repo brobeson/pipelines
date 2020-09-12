@@ -21,14 +21,27 @@ namespace pipelines
   class pipe
   {
   public:
+    /// The type of the data that can a pipe object can hold.
     using value_type = T;
 
   private:
     using queue_type = std::queue<value_type>;
 
   public:
+    /// The type of the pipe size.
     using size_type = typename queue_type::size_type;
-    void write(const value_type& value) { m_queue.push(value); };
+
+    /**
+     * \brief Write an element to the pipe.
+     * \param[in] value The element to write.
+     */
+    void write(const value_type& value) { m_queue.push(value); }
+
+    /**
+     * \brief Read one element from the pipe.
+     * \return The first data element available in the pipe.
+     * \throws pipelines::empty_pipe if the pipe is empty.
+     */
     [[nodiscard]] value_type read()
     {
       if (m_queue.empty())
@@ -39,10 +52,22 @@ namespace pipelines
       m_queue.pop();
       return v;
     }
-    [[nodiscard]] bool empty() const noexcept { return m_queue.empty(); };
-    [[nodiscard]] size_type size() const noexcept { return m_queue.size(); };
+
+    /**
+     * \brief Check if the pipe is empty.
+     * \retval true Indicates there are no elements in the pipe.
+     * \retval false Indicates there is at least one element in the pipe.
+     */
+    [[nodiscard]] bool empty() const noexcept { return m_queue.empty(); }
+
+    /**
+     * \brief Get the number of elements in the pipe.
+     * \return The number of elements in the pipe.
+     */
+    [[nodiscard]] size_type size() const noexcept { return m_queue.size(); }
 
   private:
+    // TODO This needs to be made thread safe.
     queue_type m_queue;
   };
 }  // namespace pipelines

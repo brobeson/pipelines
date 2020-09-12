@@ -10,6 +10,7 @@ Welcome to pipelines's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   building
    pipe
 
 

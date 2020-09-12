@@ -17,7 +17,10 @@ find_package(Sphinx REQUIRED)
 find_package(Breathe REQUIRED)
 add_custom_command(
   OUTPUT "${CMAKE_CURRENT_BINARY_DIR}/documentation/sphinx/index.html"
-  DEPENDS ${restructured_text_files}
+  DEPENDS
+    doxygen
+    building.rst
+    index.rst
   COMMAND
     ${SPHINX_EXECUTABLE}
     -b html

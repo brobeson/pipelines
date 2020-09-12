@@ -19,7 +19,6 @@ add_subdirectory(documentation)
 # TODO - Consider adding a target to build PDF documentation with Sphinx.
 # TODO - Update the Doxygen, Sphinx, and Breathe configurations. This may allow cleaning up the .gitignore file.
 # TODO - Clean up documentation/CMakeLists.txt.
-# TODO - Move the build instructions to a .rst file and include it in the built documenation. The readme file can link to it.
 # TODO - Add an option to disable building the documentation.
 # TODO - Add a PyPI requirements file to install Sphinx and breathe.
 

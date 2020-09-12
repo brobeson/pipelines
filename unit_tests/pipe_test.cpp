@@ -1,6 +1,6 @@
 #define CATCH_CONFIG_MAIN
 #include "pipelines/pipe.h"
-#include "catch.hpp"
+#include <catch2/catch.hpp>
 
 SCENARIO("A pipe can be constructed.")
 {

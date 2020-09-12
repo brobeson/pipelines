@@ -22,7 +22,6 @@ add_subdirectory(documentation)
 # TODO - Add Valgrind to the unit tests.
 # TODO - Add test coverage to the build process.
 # TODO - Configure the Doxygen configuration file using CMake variables.
-# TODO - Consider using an installation of Catch2, instead of the single header.
 # TODO - Consider adding a target to build PDF documentation with Sphinx.
 # TODO - Update the Doxygen, Sphinx, and Breathe configurations. This may allow cleaning up the .gitignore file.
 # TODO - Clean up documentation/CMakeLists.txt.

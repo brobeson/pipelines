@@ -14,6 +14,9 @@ endif()
 # Generating documentation
 add_subdirectory(documentation)
 
+find_package(Lizard REQUIRED)
+add_lizard_target(MODIFIED CCN 10 ARGUMENTS 5 LENGTH 30)
+
 # Documentation Tasks
 # TODO - Configure the Doxygen configuration file using CMake variables.
 # TODO - Consider adding a target to build PDF documentation with Sphinx.
@@ -29,7 +32,6 @@ add_subdirectory(documentation)
 # TODO - Add Valgrind to the unit tests.
 # TODO - Add test coverage to the build process.
 # TODO - Add support for Visual Studio.
-# TODO - Add Lizard to the build process.
 # TODO - Add thread sanitizer to the unit tests.
 
 # Miscellaneous Tasks

@@ -63,6 +63,15 @@ documentation. At this time, Doxygen is required; there is no way to disable
 building the documentation. Install it using the appropriate mechanism for
 your platform.
 
+Lizard
+......
+
+`Lizard <https://github.com/terryyin/lizard>`_ is required to run complexity analysis at build time. Install it from PyPI:
+
+.. code-block:: bash
+
+    sudo pip3 install lizard
+
 Sphinx
 ......
 

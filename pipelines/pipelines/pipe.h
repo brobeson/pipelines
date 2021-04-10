@@ -18,7 +18,7 @@ namespace pipelines
    * \tparam T The type of the data written to, and read from, the pipe.
    */
   template <typename T>
-  class pipe
+  class pipe final
   {
   public:
     /// The type of the data that can a pipe object can hold.
